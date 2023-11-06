@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Smokers{% endblock %}</title>
+  </head>
+  <body>
+      {% block content %}
+      <div class="row">
+        <div class="col">
+          <div class="border border-secondary border-2 rounded-3 p-4 m-4">
+            
+            
+          <h2>Enter Details Of Person</h2>
+          <hr>
+          <form action="." method="post">
+            {% csrf_token %}
+            {{ that_form|crispy }}      
+            <button class="btn btn-primary" type="submit">Process</button>
+          </form>
+          </div>
+        </div>
+        <div class="col">
+          <div class="border border-secondary border-2 rounded-3 p-4 m-4">
+          <h2>Prediction</h2>
+          <hr>
+          <p>{{ prediction }}</p>
+          </div>
+        </div>
+      </div>
+   
+    {% endblock %}
+  </body>
+</html>

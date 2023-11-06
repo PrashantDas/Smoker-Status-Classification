@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Methodology{% endblock %}</title>
+  </head>
+  <body>
+      {% block content %}
+      <div class="row">
+
+        <div class="col"></div>
+
+        <div class="col">
+          <div class="border border-secondary border-2 rounded-3 p-4 m-4">
+            <h2>Methodology</h2>
+            <hr>
+            <p class="text-break">
+              At the heart of this algorithm is a model that has already performed classification using Logistic Regression on data that has been collected from a sample of one-and-half lakh individuals and learnt the relationship between the
+              heights, weights, ages, cholestrol levels, haemoglobin, lipids and lipoproteins and the corresponding condition of being a smoker or a non-smoker.
+              
+             
+            </p>
+            <p class="text-break">
+              The algorithm on this website does not perform classification on the fly. The data entered via this form is fed to the model which analyses it and calculates whether a person is likely a smoker or not.
+            </p>
+          </div>
+        </div>
+
+        <div class="col"></div>
+
+
+      </div>
+   
+    {% endblock %}
+  </body>
+</html>
